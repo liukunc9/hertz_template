@@ -1,0 +1,8 @@
+mode:
+  test
+mysql:
+  username: root
+  password: mysql123
+  db-name: go_demo
+  host: 127.0.0.1
+  port: 3306

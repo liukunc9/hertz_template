@@ -1,0 +1,29 @@
+### 修改用户
+PUT http://localhost:8888/api/v1/sys/user/123
+Content-Type: application/json
+
+{
+  "userInfo": {
+    "name": "zyj",
+    "age": 26,
+    "address": "重庆市涪陵区",
+    "password": "zyj19941220"
+  }
+}
+
+### 创建用户
+POST http://localhost:8888/api/v1/sys/user
+Content-Type: application/json
+
+{
+  "userInfo": {
+    "name": "zyj",
+    "age": 26,
+    "address": "重庆市涪陵区",
+    "password": "zyj19941220"
+  }
+}
+
+### 查询用户
+GET http://localhost:8888/api/v1/sys/user?user_ids=1715040932794994688,1715041046229946368
+Accept: application/json
