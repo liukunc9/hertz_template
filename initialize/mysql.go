@@ -32,7 +32,11 @@ func initDB() {
 	if err != nil {
 		panic(err)
 	}
-	global.DB = db
+	if global.Viper.Get("mode") == "release" {
+		global.DB = db
+	} else {
+		global.DB = db.Debug()
+	}
 }
 
 func getGormConfig() *gorm.Config {

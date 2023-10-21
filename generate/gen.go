@@ -9,9 +9,9 @@ import (
 
 func main() {
 	g := gen.NewGenerator(gen.Config{
-		OutPath:      "../dao",                                                           // 定义 dao 文件输出目录
-		ModelPkgPath: "../dao/entity",                                                    // 定义 model 文件输出目录
-		Mode:         gen.WithoutContext | gen.WithDefaultQuery | gen.WithQueryInterface, // generate mode
+		OutPath:      "../dao",               // 定义 dao 文件输出目录
+		ModelPkgPath: "../dao/model",         // 定义 model 文件输出目录
+		Mode:         gen.WithQueryInterface, // generate mode
 	})
 
 	db, _ := gorm.Open(
