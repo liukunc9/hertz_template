@@ -4,6 +4,7 @@ package main
 
 import (
 	"github.com/cloudwego/hertz/pkg/app/server"
+	"github.com/hertz-contrib/pprof"
 	"github.com/liukunc9/hertz_template/initialize"
 )
 
@@ -12,5 +13,6 @@ func main() {
 
 	h := server.Default()
 	register(h)
+	pprof.Register(h)
 	h.Spin()
 }
